@@ -1,0 +1,49 @@
+{"level":"DEBUG","time":"2021-01-25T18:05:30.112+0800","caller":"bluebell/main.go:37","msg":"log init success!"}
+{"level":"DEBUG","time":"2021-01-25T18:08:05.120+0800","caller":"bluebell/main.go:37","msg":"log init success!"}
+{"level":"DEBUG","time":"2021-01-25T18:09:02.480+0800","caller":"bluebell/main.go:37","msg":"log init success!"}
+{"level":"DEBUG","time":"2021-01-25T18:11:31.053+0800","caller":"bluebell/main.go:37","msg":"log init success!"}
+{"level":"DEBUG","time":"2021-01-25T18:25:24.124+0800","caller":"bluebell/main.go:37","msg":"log init success!"}
+{"level":"DEBUG","time":"2021-01-25T18:31:00.863+0800","caller":"bluebell/main.go:37","msg":"log init success!"}
+{"level":"DEBUG","time":"2021-01-25T18:43:41.137+0800","caller":"bluebell/main.go:37","msg":"log init success!"}
+{"level":"DEBUG","time":"2021-01-25T19:16:53.233+0800","caller":"bluebell/main.go:37","msg":"log init success!"}
+{"level":"DEBUG","time":"2021-01-25T19:21:43.849+0800","caller":"bluebell/main.go:37","msg":"log init success!"}
+{"level":"DEBUG","time":"2021-01-25T19:36:17.988+0800","caller":"bluebell/main.go:37","msg":"log init success!"}
+{"level":"DEBUG","time":"2021-01-25T19:38:11.819+0800","caller":"bluebell/main.go:37","msg":"log init success!"}
+{"level":"DEBUG","time":"2021-01-25T19:40:18.515+0800","caller":"bluebell/main.go:37","msg":"log init success!"}
+{"level":"DEBUG","time":"2021-01-25T19:41:04.613+0800","caller":"bluebell/main.go:37","msg":"log init success!"}
+{"level":"DEBUG","time":"2021-01-25T19:49:11.879+0800","caller":"bluebell/main.go:37","msg":"log init success!"}
+{"level":"DEBUG","time":"2021-01-25T19:50:36.116+0800","caller":"bluebell/main.go:37","msg":"log init success!"}
+{"level":"INFO","time":"2021-01-27T14:46:34.415+0800","caller":"logger/logger.go:68","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:84.0) Gecko/20100101 Firefox/84.0","errors":"","cost":0.000061625}
+{"level":"INFO","time":"2021-01-27T15:58:10.973+0800","caller":"logger/logger.go:68","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:84.0) Gecko/20100101 Firefox/84.0","errors":"","cost":0.000010274}
+{"level":"INFO","time":"2021-01-27T15:58:12.077+0800","caller":"logger/logger.go:68","msg":"/","status":200,"method":"GET","path":"/","query":"","ip":"127.0.0.1","user-agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:84.0) Gecko/20100101 Firefox/84.0","errors":"","cost":0.000013307}
+{"level":"ERROR","time":"2021-01-27T18:37:32.738+0800","caller":"controller/user.go:20","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-01-27T18:37:32.739+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000938673}
+{"level":"ERROR","time":"2021-01-27T18:37:51.975+0800","caller":"controller/user.go:20","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-01-27T18:37:51.975+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000099507}
+{"level":"ERROR","time":"2021-01-27T18:38:59.647+0800","caller":"controller/user.go:20","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-01-27T18:38:59.647+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000130873}
+{"level":"ERROR","time":"2021-01-27T18:40:16.614+0800","caller":"controller/user.go:20","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-01-27T18:40:16.615+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.001391853}
+{"level":"ERROR","time":"2021-01-27T18:41:05.246+0800","caller":"controller/user.go:20","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-01-27T18:41:05.246+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000101917}
+{"level":"ERROR","time":"2021-01-27T18:41:06.655+0800","caller":"controller/user.go:20","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-01-27T18:41:06.655+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.00026887}
+{"level":"ERROR","time":"2021-01-27T18:41:07.394+0800","caller":"controller/user.go:20","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-01-27T18:41:07.394+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000217874}
+{"level":"ERROR","time":"2021-01-27T18:41:07.958+0800","caller":"controller/user.go:20","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-01-27T18:41:07.958+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000252743}
+{"level":"ERROR","time":"2021-01-27T18:41:08.904+0800","caller":"controller/user.go:20","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-01-27T18:41:08.904+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000116127}
+{"level":"ERROR","time":"2021-01-27T18:41:27.649+0800","caller":"controller/user.go:20","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-01-27T18:41:27.650+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000818099}
+{"level":"INFO","time":"2021-01-27T18:41:42.976+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000205292}
+{"level":"INFO","time":"2021-01-27T18:42:11.595+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000051919}
+{"level":"INFO","time":"2021-01-27T18:45:43.503+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000342063}
+{"level":"INFO","time":"2021-01-27T18:54:00.067+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000517547}
+{"level":"INFO","time":"2021-01-27T18:54:09.863+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000055607}
+{"level":"ERROR","time":"2021-01-27T18:59:47.272+0800","caller":"controller/user.go:27","msg":"sign up with invalid param"}
+{"level":"ERROR","time":"2021-01-27T18:59:47.272+0800","caller":"controller/user.go:33","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-01-27T18:59:47.272+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000573345}
+{"level":"ERROR","time":"2021-01-27T19:11:41.447+0800","caller":"controller/user.go:27","msg":"sign up with invalid param"}
+{"level":"ERROR","time":"2021-01-27T19:11:41.447+0800","caller":"controller/user.go:33","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-01-27T19:11:41.447+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000127952}

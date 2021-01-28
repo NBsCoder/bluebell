@@ -7,13 +7,19 @@ import (
 )
 
 //注册
-func SignUp() {
-	var p model.ParamSignUp
+func SignUp(p *model.ParamSignUp) (err error) {
 	//1.判断用户名是否存在
-	mysql.QueryUserByUsername(p.Username)
+	if err := mysql.CheckUserExist(p.Username); err != nil {
+		return err
+	}
 	//2.生成UID
-	snowflake.GenID()
-	//3.用户密码加密
-	//4.数据保存进数据库
-	mysql.InsertUser()
+	userID := snowflake.GenID()
+	//构造一个user实例
+	user := &model.User{
+		UserID:   userID,
+		Username: p.Username,
+		Password: p.Password,
+	}
+	//3.数据保存进数据库
+	return mysql.InsertUser(user)
 }

@@ -55,12 +55,12 @@ func SignUpHandlerFunc(c *gin.Context) {
 	}
 	//3.返回响应
 	c.JSON(http.StatusOK, gin.H{
-		"msg": "success!",
+		"msg": "注册成功!",
 	})
 }
 func LoginHandlerFunc(c *gin.Context) {
 	//1.获取请求
-	//定义一个结构体获取请求包重的数据
+	//定义一个结构体获取请求包中的数据
 	//将请求中的数据绑定到结构体中
 	p := new(model.ParamLogin)
 	if err := c.ShouldBindJSON(&p); err != nil {
@@ -83,13 +83,14 @@ func LoginHandlerFunc(c *gin.Context) {
 
 	//2.处理业务
 	if err := logic.Login(p); err != nil {
+		zap.L().Error("logic.Login failed", zap.Error(err))
 		c.JSON(http.StatusOK, gin.H{
-			"msg": "注册失败",
+			"msg": "用户名或密码错误",
 		})
 		return
 	}
 	//3.返回响应
 	c.JSON(http.StatusOK, gin.H{
-		"msg": "success",
+		"msg": "登陆成功",
 	})
 }

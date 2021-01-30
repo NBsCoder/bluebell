@@ -6,7 +6,7 @@ import (
 	"bluelell/pkg/snowflake"
 )
 
-//注册
+// SignUp 注册
 func SignUp(p *model.ParamSignUp) (err error) {
 	//1.判断用户名是否存在
 	if err := mysql.CheckUserExist(p.Username); err != nil {
@@ -24,8 +24,11 @@ func SignUp(p *model.ParamSignUp) (err error) {
 	return mysql.InsertUser(user)
 }
 
-//登陆
-func Login(p *model.ParamLogin) (err error) {
-
-	return
+// Login 登陆
+func Login(p *model.ParamLogin) error {
+	user := &model.User{
+		Username: p.Username,
+		Password: p.Password,
+	}
+	return mysql.Login(user)
 }

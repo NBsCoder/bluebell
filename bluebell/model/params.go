@@ -1,5 +1,7 @@
 package model
 
+// 定义请求参数的结构体，专门跟请求参数有关
+
 // ParamSignUp 注册请求参数
 type ParamSignUp struct {
 	Username   string `json:"username" binding:"required"`

@@ -83,7 +83,7 @@ func LoginHandlerFunc(c *gin.Context) {
 
 	//2.处理业务
 	if err := logic.Login(p); err != nil {
-		zap.L().Error("logic.Login failed", zap.Error(err))
+		zap.L().Error("logic.Login failed", zap.String("username", p.Username), zap.Error(err))
 		c.JSON(http.StatusOK, gin.H{
 			"msg": "用户名或密码错误",
 		})

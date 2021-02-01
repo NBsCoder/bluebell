@@ -105,3 +105,5 @@
 {"level":"INFO","time":"2021-01-30T17:16:45.893+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.008864164}
 {"level":"INFO","time":"2021-01-30T17:17:11.083+0800","caller":"logger/logger.go:68","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000441371}
 {"level":"INFO","time":"2021-01-30T17:17:42.484+0800","caller":"logger/logger.go:68","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000899514}
+{"level":"ERROR","time":"2021-01-30T17:40:33.316+0800","caller":"controller/user.go:86","msg":"logic.Login failed","username":"11","error":"用户不存在"}
+{"level":"INFO","time":"2021-01-30T17:40:33.316+0800","caller":"logger/logger.go:68","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.002002607}

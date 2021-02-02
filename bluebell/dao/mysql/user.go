@@ -10,6 +10,12 @@ import (
 
 const secret = "liuhailang"
 
+var (
+	ErrorUserExist       = errors.New("该用户已存在")
+	ErrorUserNotExist    = errors.New("用户不存在")
+	ErrorInvalidPassword = errors.New("用户名或密码错误")
+)
+
 // CheckUserExist 根据用户名查重
 func CheckUserExist(username string) (err error) {
 	sqlStr := `select count(user_id) from user where username = ?`
@@ -18,7 +24,7 @@ func CheckUserExist(username string) (err error) {
 		return err
 	}
 	if count > 0 {
-		return errors.New("该用户已存在")
+		return ErrorUserExist
 	}
 	return
 }
@@ -50,7 +56,7 @@ func Login(user *model.User) (err error) {
 	err = db.Get(user, sqlStr, user.Username) //直接从数据库中把这个数据查找出来存到user里边
 	//判断用户是否存在
 	if err == sql.ErrNoRows {
-		return errors.New("用户不存在")
+		return ErrorUserNotExist
 	}
 	if err != nil {
 		return err
@@ -58,7 +64,7 @@ func Login(user *model.User) (err error) {
 	//将传进来的密码加密，在和数据库中的密码对比
 	Password := encryptPassword(oPassword)
 	if Password != user.Password {
-		return errors.New("密码错误")
+		return ErrorInvalidPassword
 	}
 	return
 }

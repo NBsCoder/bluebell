@@ -4,7 +4,7 @@ type ResCode int64
 
 // 定义状态码
 const (
-	CodeSuccess = 1000 + iota
+	CodeSuccess ResCode = 1000 + iota
 	CodeInvalidParam
 	CodeUserExist
 	CodeUserNotExist

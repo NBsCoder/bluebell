@@ -38,7 +38,7 @@ func SignUpHandlerFunc(c *gin.Context) {
 			ResponseError(c, CodeUserExist)
 			return
 		}
-		ResponseError(c, CodeUserNotExist)
+		ResponseError(c, CodeServerBusy)
 		return
 	}
 	//3.返回响应
@@ -48,6 +48,8 @@ func SignUpHandlerFunc(c *gin.Context) {
 // LoginHandlerFunc 登陆
 func LoginHandlerFunc(c *gin.Context) {
 	//1.获取请求
+
+	//zhelishimeiyongbufen
 	//定义一个结构体获取请求包中的数据
 	//将请求中的数据绑定到结构体中
 	p := new(model.ParamLogin)

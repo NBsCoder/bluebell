@@ -17,12 +17,12 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:origin/develop" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/master" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e086f63c-4ed3-4b38-8e84-81b1a19d41bd" name="默认的" comment="model 4" />
+    <list default="true" id="e086f63c-4ed3-4b38-8e84-81b1a19d41bd" name="默认的" comment="错误码完成" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,7 +81,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/develop" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
@@ -117,7 +117,8 @@
     <MESSAGE value="model 2" />
     <MESSAGE value="model 3" />
     <MESSAGE value="model 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="model 4" />
+    <MESSAGE value="错误码完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="错误码完成" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -132,10 +133,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="520" y="290" key="#Go_模块/0.0.1440.900@0.0.1440.900" timestamp="1611285958160" />
-    <state x="387" y="107" width="666" height="535" key="#Log_Highlighting_(ideolog)" timestamp="1611725920364">
+    <state x="387" y="107" width="666" height="535" key="#Log_Highlighting_(ideolog)" timestamp="1614061620004">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="387" y="107" width="666" height="535" key="#Log_Highlighting_(ideolog)/0.0.1440.900@0.0.1440.900" timestamp="1611725920364" />
+    <state x="387" y="107" width="666" height="535" key="#Log_Highlighting_(ideolog)/0.0.1440.900@0.0.1440.900" timestamp="1614061620004" />
     <state x="294" y="35" key="#SQL_方言" timestamp="1611560362660">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -176,10 +177,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="403" y="23" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1612252281966" />
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1611729193091">
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1614165022273">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1611729193091" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1614165022273" />
     <state x="537" y="371" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1611298600964">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

@@ -107,3 +107,36 @@
 {"level":"INFO","time":"2021-01-30T17:17:42.484+0800","caller":"logger/logger.go:68","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000899514}
 {"level":"ERROR","time":"2021-01-30T17:40:33.316+0800","caller":"controller/user.go:86","msg":"logic.Login failed","username":"11","error":"用户不存在"}
 {"level":"INFO","time":"2021-01-30T17:40:33.316+0800","caller":"logger/logger.go:68","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.002002607}
+{"level":"ERROR","time":"2021-02-23T14:22:20.120+0800","caller":"controller/user.go:23","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-02-23T14:22:20.120+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000747986}
+{"level":"ERROR","time":"2021-02-23T14:22:55.526+0800","caller":"controller/user.go:23","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-02-23T14:22:55.526+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000094553}
+{"level":"ERROR","time":"2021-02-23T14:40:22.556+0800","caller":"controller/user.go:23","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-02-23T14:40:22.559+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.00269928}
+{"level":"ERROR","time":"2021-02-23T14:56:07.695+0800","caller":"controller/user.go:23","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-02-23T14:56:07.695+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000510978}
+{"level":"ERROR","time":"2021-02-23T14:56:12.530+0800","caller":"controller/user.go:23","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-02-23T14:56:12.530+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.00009149}
+{"level":"ERROR","time":"2021-02-23T15:00:47.325+0800","caller":"controller/user.go:70","msg":"logic.Login failed","username":"123","error":"用户名或密码错误"}
+{"level":"INFO","time":"2021-02-23T15:00:47.325+0800","caller":"logger/logger.go:68","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.007279418}
+{"level":"ERROR","time":"2021-02-23T15:00:49.239+0800","caller":"controller/user.go:70","msg":"logic.Login failed","username":"123","error":"用户名或密码错误"}
+{"level":"INFO","time":"2021-02-23T15:00:49.240+0800","caller":"logger/logger.go:68","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000500784}
+{"level":"ERROR","time":"2021-02-23T15:00:49.907+0800","caller":"controller/user.go:70","msg":"logic.Login failed","username":"123","error":"用户名或密码错误"}
+{"level":"INFO","time":"2021-02-23T15:00:49.907+0800","caller":"logger/logger.go:68","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000647807}
+{"level":"ERROR","time":"2021-02-23T15:00:50.455+0800","caller":"controller/user.go:70","msg":"logic.Login failed","username":"123","error":"用户名或密码错误"}
+{"level":"INFO","time":"2021-02-23T15:00:50.455+0800","caller":"logger/logger.go:68","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000580841}
+{"level":"ERROR","time":"2021-02-23T15:00:50.908+0800","caller":"controller/user.go:70","msg":"logic.Login failed","username":"123","error":"用户名或密码错误"}
+{"level":"INFO","time":"2021-02-23T15:00:50.908+0800","caller":"logger/logger.go:68","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000476816}
+{"level":"ERROR","time":"2021-02-23T15:00:51.271+0800","caller":"controller/user.go:70","msg":"logic.Login failed","username":"123","error":"用户名或密码错误"}
+{"level":"INFO","time":"2021-02-23T15:00:51.271+0800","caller":"logger/logger.go:68","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000553216}
+{"level":"ERROR","time":"2021-02-23T15:00:52.621+0800","caller":"controller/user.go:70","msg":"logic.Login failed","username":"123","error":"用户名或密码错误"}
+{"level":"INFO","time":"2021-02-23T15:00:52.621+0800","caller":"logger/logger.go:68","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000535627}
+{"level":"INFO","time":"2021-02-23T15:01:15.558+0800","caller":"logger/logger.go:68","msg":"/login","status":200,"method":"POST","path":"/login","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000886964}
+{"level":"ERROR","time":"2021-02-24T10:51:40.551+0800","caller":"controller/user.go:23","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-02-24T10:51:40.551+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000802462}
+{"level":"ERROR","time":"2021-02-24T10:52:35.915+0800","caller":"controller/user.go:23","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-02-24T10:52:35.915+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.00012548}
+{"level":"ERROR","time":"2021-02-24T10:53:46.125+0800","caller":"controller/user.go:23","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-02-24T10:53:46.125+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000260625}
+{"level":"ERROR","time":"2021-02-24T11:05:13.068+0800","caller":"controller/user.go:23","msg":"sign up with invalid param"}
+{"level":"INFO","time":"2021-02-24T11:05:13.069+0800","caller":"logger/logger.go:68","msg":"/signup","status":200,"method":"POST","path":"/signup","query":"","ip":"127.0.0.1","user-agent":"PostmanRuntime/7.26.8","errors":"","cost":0.000568925}

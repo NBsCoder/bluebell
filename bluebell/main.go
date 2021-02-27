@@ -84,22 +84,81 @@ func main() {
 	//	log.Println("Server exiting")
 }
 
-type student struct {
-	name string
-	age  int
-}
-
-func demo() {
-	m := make(map[string]*student)
-	stus := []student{
-		{name: "小王子", age: 18},
-		{name: "小娜扎", age: 23},
-		{name: "大王八", age: 9000},
-	}
-	for _, stu := range stus {
-		m[stu.name] = &stu
-	}
-	for k, v := range m {
-		fmt.Println(k, "=>", v.name)
-	}
-}
+//type student struct {
+//	name string
+//	age  int
+//}
+//
+//func demo() {
+//	m := make(map[string]*student)
+//	stus := []student{
+//		{name: "小王子", age: 18},
+//		{name: "小娜扎", age: 23},
+//		{name: "大王八", age: 9000},
+//	}
+//	for _, stu := range stus {
+//		m[stu.name] = &stu
+//	}
+//	for k, v := range m {
+//		fmt.Println(k, "=>", v.name)
+//	}
+//}
+//package main
+//
+//import "awesomeProject/model"
+//
+//func main() {
+//	user:=model.NewUser("xiaoming","123456",20)
+//	user.GetMoney("xiaoming","123456")
+//	user.SetPwd("xiaoming","123456","111111")
+//}
+//package model
+//
+//import "fmt"
+//
+//type user struct {
+//	name string
+//	pwd string
+//	money int
+//}
+//
+//func NewUser(name string,pwd string,money int)*user{
+//	//处理细节
+//	if name==""{
+//		fmt.Println("名字有误")
+//	}
+//	if pwd!="123456"{
+//		fmt.Println("密码错误")
+//	}
+//	if money<0&&money>1000{
+//		fmt.Println("穷逼")
+//	}
+//	return &user{
+//		name:name,
+//		pwd:pwd,
+//		money: money,
+//	}
+//}
+//func (u *user)SetPwd(name string,pwd string,newPwd string){
+//	if name!=u.name{
+//		fmt.Println("用户名输入错误")
+//		return
+//	}
+//	if pwd!=u.pwd{
+//		fmt.Println("密码输入错误")
+//		return
+//	}
+//	u.pwd=newPwd
+//	fmt.Printf("修改密码成功,新密码为：%v\n",u.pwd)
+//}
+//func (u user)GetMoney(name string,pwd string){
+//	if name==""{
+//		fmt.Println("无此用户")
+//		return
+//	}
+//	if pwd!=u.pwd{
+//		fmt.Println("密码输入错误")
+//		return
+//	}
+//	fmt.Printf("余额：%d\n",u.money)
+//}

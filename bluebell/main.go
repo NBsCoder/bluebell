@@ -162,3 +162,25 @@ func main() {
 //	}
 //	fmt.Printf("余额：%d\n",u.money)
 //}
+//type A struct {
+//	name string
+//}
+//type B struct {
+//	name string
+//}
+//type C struct {
+//	name string
+//}
+//type D struct {
+//	A
+//	B
+//	c    C
+//	name string
+//}
+//
+//func Animal() {
+//	var d D
+//	d.name = "abc"
+//	d.B.name = "def"
+//	d.c.name = "ghi"
+//}

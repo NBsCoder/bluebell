@@ -1562,3 +1562,200 @@ func main() {
 //	}
 //	fmt.Println("你退出家庭记账软件的使用...")
 //}
+//package main
+//import (
+//"fmt"
+//"os"
+//"io"
+//"bufio"
+//)
+//
+////定义一个结构体，用于保存统计结果
+//type CharCount struct {
+//	ChCount int // 记录英文个数
+//	NumCount int // 记录数字的个数
+//	SpaceCount int // 记录空格的个数
+//	OtherCount int // 记录其它字符的个数
+//}
+//
+//func main() {
+//
+//	//思路: 打开一个文件, 创一个Reader
+//	//每读取一行，就去统计该行有多少个 英文、数字、空格和其他字符
+//	//然后将结果保存到一个结构体
+//	fileName := "e:/abc.txt"
+//	file, err := os.Open(fileName)
+//	if err != nil {
+//		fmt.Printf("open file err=%v\n", err)
+//		return
+//	}
+//	defer file.Close()
+//	//定义个CharCount 实例
+//	var count CharCount
+//	//创建一个Reader
+//	reader := bufio.NewReader(file)
+//
+//	//开始循环的读取fileName的内容
+//	for {
+//		str, err := reader.ReadString('\n')
+//		if err == io.EOF { //读到文件末尾就退出
+//			break
+//		}
+//		//遍历 str ，进行统计
+//		for _, v := range str {
+//
+//			switch {
+//			case v >= 'a' && v <= 'z':
+//				fallthrough //穿透
+//			case v >= 'A' && v <= 'Z':
+//				count.ChCount++
+//			case v == ' ' || v == '\t':
+//				count.SpaceCount++
+//			case v >= '0' && v <= '9':
+//				count.NumCount++
+//			default :
+//				count.OtherCount++
+//			}
+//		}
+//	}
+//
+//	//输出统计的结果看看是否正确
+//	fmt.Printf("字符的个数为=%v 数字的个数为=%v 空格的个数为=%v 其它字符个数=%v",
+//		count.ChCount, count.NumCount, count.SpaceCount, count.OtherCount)
+//
+//}
+//package main
+//import (
+//"fmt"
+//"flag"
+//)
+//
+//func main() {
+//
+//	//定义几个变量，用于接收命令行的参数值
+//	var user string
+//	var pwd string
+//	var host string
+//	var port int
+//
+//	//&user 就是接收用户命令行中输入的 -u 后面的参数值
+//	//"u" ,就是 -u 指定参数
+//	//"" , 默认值
+//	//"用户名,默认为空" 说明
+//	flag.StringVar(&user, "u", "", "用户名,默认为空")
+//	flag.StringVar(&pwd, "pwd", "", "密码,默认为空")
+//	flag.StringVar(&host, "h", "localhost", "主机名,默认为localhost")
+//	flag.IntVar(&port, "port", 3306, "端口号，默认为3306")
+//	//这里有一个非常重要的操作,转换， 必须调用该方法
+//	flag.Parse()
+//
+//	//输出结果
+//	fmt.Printf("user=%v pwd=%v host=%v port=%v",
+//		user, pwd, host, port)
+//
+//}
+//package main
+//import (
+//"fmt"
+//"encoding/json"
+//)
+//
+////定义一个结构体
+//type Monster struct {
+//	Name string `json:"monster_name"` //反射机制
+//	Age int `json:"monster_age"`
+//	Birthday string //....
+//	Sal float64
+//	Skill string
+//}
+//
+//func testStruct() {
+//	//演示
+//	monster := Monster{
+//		Name :"牛魔王",
+//		Age : 500 ,
+//		Birthday : "2011-11-11",
+//		Sal : 8000.0,
+//		Skill : "牛魔拳",
+//	}
+//
+//	//将monster 序列化
+//	data, err := json.Marshal(&monster) //..
+//	if err != nil {
+//		fmt.Printf("序列号错误 err=%v\n", err)
+//	}
+//	//输出序列化后的结果
+//	fmt.Printf("monster序列化后=%v\n", string(data))
+//
+//}
+//
+////将map进行序列化
+//func testMap() {
+//	//定义一个map
+//	var a map[string]interface{}
+//	//使用map,需要make
+//	a = make(map[string]interface{})
+//	a["name"] = "红孩儿"
+//	a["age"] = 30
+//	a["address"] = "洪崖洞"
+//
+//	//将a这个map进行序列化
+//	//将monster 序列化
+//	data, err := json.Marshal(a)
+//	if err != nil {
+//		fmt.Printf("序列化错误 err=%v\n", err)
+//	}
+//	//输出序列化后的结果
+//	fmt.Printf("a map 序列化后=%v\n", string(data))
+//
+//}
+//
+////演示对切片进行序列化, 我们这个切片 []map[string]interface{}
+//func testSlice() {
+//	var slice []map[string]interface{}
+//	var m1 map[string]interface{}
+//	//使用map前，需要先make
+//	m1 = make(map[string]interface{})
+//	m1["name"] = "jack"
+//	m1["age"] = "7"
+//	m1["address"] = "北京"
+//	slice = append(slice, m1)
+//
+//	var m2 map[string]interface{}
+//	//使用map前，需要先make
+//	m2 = make(map[string]interface{})
+//	m2["name"] = "tom"
+//	m2["age"] = "20"
+//	m2["address"] = [2]string{"墨西哥","夏威夷"}
+//	slice = append(slice, m2)
+//
+//	//将切片进行序列化操作
+//	data, err := json.Marshal(slice)
+//	if err != nil {
+//		fmt.Printf("序列化错误 err=%v\n", err)
+//	}
+//	//输出序列化后的结果
+//	fmt.Printf("slice 序列化后=%v\n", string(data))
+//
+//}
+//
+////对基本数据类型序列化，对基本数据类型进行序列化意义不大
+//func testFloat64() {
+//	var num1 float64 = 2345.67
+//
+//	//对num1进行序列化
+//	data, err := json.Marshal(num1)
+//	if err != nil {
+//		fmt.Printf("序列化错误 err=%v\n", err)
+//	}
+//	//输出序列化后的结果
+//	fmt.Printf("num1 序列化后=%v\n", string(data))
+//}
+//
+//func main() {
+//	//演示将结构体, map , 切片进行序列号
+//	testStruct()
+//	testMap()
+//	testSlice()//演示对切片的序列化
+//	testFloat64()//演示对基本数据类型的序列化
+//}

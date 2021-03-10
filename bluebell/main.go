@@ -1759,3 +1759,158 @@ func main() {
 //	testSlice()//演示对切片的序列化
 //	testFloat64()//演示对基本数据类型的序列化
 //}
+//package main
+//import "fmt"
+///*
+//	arr=[1,1,1,2,2,3,4,3]
+//	编写一个函数，输入数组，输出数组中重复最多的元素，及对应重复次数
+//	返回出现最多的元素及其出现次数
+//*/
+//var b map[int]int
+///*
+//	1、将不同的元素存为map的key
+//	2、拿key去数组中遍历，出现一次，计数加1
+//	3、将次数存为map的值
+//	4、比较map的值，选出最大值并将键一起打印出来
+//*/
+//func f(a []int) map[int]int{
+//	var s []int
+//	for i := 0; i < len(a)-1; i++ { //1、遍历拿到map的key,存到一个切片中
+//		if a[i] != a[i+1] {
+//			s = append(s, a[i])
+//		}
+//	}
+//	for _, v := range s {			//2.遍历拿到map的value
+//		var count int = 0
+//		for _, y := range a {
+//			if v == y {
+//				count++
+//			}
+//			b[v] = count
+//		}
+//	}
+//	for m, _ := range b {			//3.冒泡排序
+//		fmt.Printf("数字%d出现了%d次\n", m, b[m])
+//	}
+//	return b
+//}
+//func main() {
+//	var arr = []int{1, 1, 1, 2,2, 2, 3, 4, 3}
+//	b = make(map[int]int)
+//	v:=f(arr)
+//	var max int
+//	var maxKey []int
+//	for k,w:=range v{
+//		if w>max||max==0{
+//			max=w
+//		}
+//		if max==v[k]{
+//			maxKey=append(maxKey,k)
+//		}
+//	}
+//	fmt.Printf("出现最多的数字是%d，最多的数字%d次\n",maxKey,max)
+//}
+//package main
+//import (
+//"fmt"
+//"time"
+//)
+//
+//// 需求：现在要计算 1-200 的各个数的阶乘，并且把各个数的阶乘放入到map中。
+//// 最后显示出来。要求使用goroutine完成
+//
+//// 思路
+//// 1. 编写一个函数，来计算各个数的阶乘，并放入到 map中.
+//// 2. 我们启动的协程多个，统计的将结果放入到 map中
+//// 3. map 应该做出一个全局的.
+//
+//var (
+//	myMap = make(map[int]int, 10)
+//)
+//
+//// test 函数就是计算 n!, 让将这个结果放入到 myMap
+//func test(n int) {
+//
+//	res := 1
+//	for i := 1; i <= n; i++ {
+//		res *= i
+//	}
+//
+//	//这里我们将 res 放入到myMap
+//	myMap[n] = res //concurrent map writes?
+//}
+//
+//func main() {
+//
+//	// 我们这里开启多个协程完成这个任务[200个]
+//	for i := 1; i <= 200; i++ {
+//		go test(i)
+//	}
+//
+//
+//	//休眠10秒钟【第二个问题 】
+//	time.Sleep(time.Second * 10)
+//
+//	//这里我们输出结果,变量这个结果
+//	for i, v := range myMap {
+//		fmt.Printf("map[%d]=%d\n", i, v)
+//	}
+//}
+//package main
+//import (
+//"fmt"
+//_ "time"
+//"sync"
+//)
+//
+//// 需求：现在要计算 1-200 的各个数的阶乘，并且把各个数的阶乘放入到map中。
+//// 最后显示出来。要求使用goroutine完成
+//
+//// 思路
+//// 1. 编写一个函数，来计算各个数的阶乘，并放入到 map中.
+//// 2. 我们启动的协程多个，统计的将结果放入到 map中
+//// 3. map 应该做出一个全局的.
+//
+//var (
+//	myMap = make(map[int]int, 10)
+//	//声明一个全局的互斥锁
+//	//lock 是一个全局的互斥锁，
+//	//sync 是包: synchornized 同步
+//	//Mutex : 是互斥
+//	lock sync.Mutex
+//)
+//
+//// test 函数就是计算 n!, 让将这个结果放入到 myMap
+//func test(n int) {
+//
+//	res := 1
+//	for i := 1; i <= n; i++ {
+//		res *= i
+//	}
+//
+//	//这里我们将 res 放入到myMap
+//	//加锁
+//	lock.Lock()
+//	myMap[n] = res //concurrent map writes?
+//	//解锁
+//	lock.Unlock()
+//}
+//
+//func main() {
+//
+//	// 我们这里开启多个协程完成这个任务[200个]
+//	for i := 1; i <= 20; i++ {
+//		go test(i)
+//	}
+//
+//	//休眠10秒钟【第二个问题 】
+//	//time.Sleep(time.Second * 5)
+//
+//	//这里我们输出结果,变量这个结果
+//	lock.Lock()
+//	for i, v := range myMap {
+//		fmt.Printf("map[%d]=%d\n", i, v)
+//	}
+//	lock.Unlock()
+//
+//}

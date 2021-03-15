@@ -2154,3 +2154,307 @@ func main() {
 //
 //	fmt.Println("文件读取结束...")
 //}
+////package main
+////
+////import (
+////	"fmt"
+////	"time"
+////)
+//
+/////*
+////	arr=[1,1,1,2,2,3,4,3]
+////	编写一个函数，输入数组，输出数组中重复最多的元素，及对应重复次数
+////	返回出现最多的元素及其出现次数
+////*/
+////var b map[int]int
+/////*
+////	1、将不同的元素存为map的key
+////	2、拿key去数组中遍历，出现一次，计数加1
+////	3、将次数存为map的值
+////	4、比较map的值，选出最大值并将键一起打印出来
+////*/
+////func f(a []int) map[int]int{
+////	var s []int
+////	for i := 0; i < len(a)-1; i++ { //1、遍历拿到map的key,存到一个切片中
+////		if a[i] != a[i+1] {
+////			s = append(s, a[i])
+////		}
+////	}
+////	for _, v := range s {			//2.遍历拿到map的value
+////		var count int = 0
+////		for _, y := range a {
+////			if v == y {
+////				count++
+////			}
+////			b[v] = count
+////		}
+////	}
+////	for m, _ := range b {			//3.冒泡排序
+////		fmt.Printf("数字%d出现了%d次\n", m, b[m])
+////	}
+////	return b
+////}
+////func main() {
+////	var arr = []int{1,1,1, 1, 1, 2,2, 2,2,2, 3, 4, 3,3}
+////	b = make(map[int]int)
+////	v:=f(arr)
+////	var max int
+////	var maxKey []int
+////	for k,w:=range v{
+////		if w>max||max==0{
+////			max=w
+////		}
+////		if max==v[k]{
+////			maxKey=append(maxKey,k)
+////		}
+////	}
+////	fmt.Printf("出现最多的数字是%d，最多的数字%d次\n",maxKey,max)
+////}
+//
+//// 1. s = []string{"a","cc","sa","cc"} 需求: 切片字符串去重 期望返回值: [ "a" "cc" "sa"]
+//// 2. s = []string{"a","cc","sa","cc"} 传入: "cc" 需求: 根据传入值,删除切片元素  期望得到: ["a" "sa"]
+////func main(){
+////	var s =[]string{"a","cc","sa","cc"}
+////	m:= make(map[string]string)
+////	var b []string
+////	for _,value:=range s{
+////		m[value]="a"
+////	}
+////	for k,_:=range m{
+////		b=append(b,k)
+////	}
+////	fmt.Println(b)
+////}
+//
+////请判断"abcdcba"字符串是否是回文
+////
+////package main
+////
+////import (
+////	"fmt"
+////)
+////
+//////write Data
+////func writeData(intChan chan int) {
+////	for i := 1; i <= 50; i++ {
+////		//放入数据
+////		intChan <- i //
+////		fmt.Println("writeData ", i)
+////		//time.Sleep(time.Second)
+////	}
+////	close(intChan) //关闭
+////}
+////
+//////read data
+////func readData(intChan chan int,exitChan chan bool) {
+////
+////	for {
+////		v, ok := <-intChan
+////		if !ok {
+////			break
+////		}
+////		//time.Sleep(time.Second)
+////		fmt.Printf("readData 读到数据=%v\n", v)
+////	}
+////	//readData 读取完数据后，即任务完成
+////	exitChan <- true
+////	close(exitChan)
+////
+////}
+////
+////func main() {
+////
+////	//创建两个管道
+////	intChan := make(chan int, 10)
+////	exitChan := make(chan bool, 1)
+////	go writeData(intChan)
+////	go readData(intChan,exitChan)
+////	for {
+////		value, ok := <-exitChan
+////		if !ok {
+////			break
+////		}
+////		fmt.Println(value)
+////	}
+////
+////}
+//package main
+//
+//import "fmt"
+//
+////往numChan中写入2000个数字
+//func writeDate(numChan chan int){
+//	for i:=1;i<=2000;i++{
+//		numChan<-i
+//	}
+////写完了，关闭通道
+//	close(numChan)
+//}
+////从numChan中取出数字并计算各个数字的累加
+//func addSum(numChan chan int,resChan chan int64,exitChan chan bool)  {
+//	var sum int
+//	for v:=range numChan{
+//		sum +=v
+//		resChan<-int64(sum)
+//	}
+//	close(resChan)
+//	exitChan<-true
+//}
+//func main()  {
+//	a:=2.0
+//	fmt.Println(a)
+//	 numChan:=make(chan int,1000)
+//	 resChan:=make(chan int64,2000)
+//	 exitChan:=make(chan bool,8)
+//	 //1、开启一个协程往numChan中加数字
+//	go writeDate(numChan)
+//	 //2、开启8个协程，读取numChan中的值并累加，存到resChan中
+//	 for i:=0;i<8;i++{
+//	 	go addSum(numChan,resChan,exitChan)
+//	 }
+//	 //3、遍历exitChan，等待协程运算完毕
+//	go func() {
+//		//能读到8个值
+//		for j:=0;j<8;j++{
+//			<-exitChan
+//		}
+//		//读完8个值就关闭这个通道
+//		close(exitChan)
+//	}()
+//	 //4、遍历resChan通道，并将结果处理一下打印出来
+//
+//}
+//package main
+//
+//import "fmt"
+
+//func main()  {
+//	ch:='b'					//int32
+//	fmt.Println(2.00000/ch)		//int32 / float64	=	49
+//	//ch:='b'
+//	//a:=2.0
+//	//fmt.Println(ch/a)		这里编译时会报错
+//}
+//func f1() int {
+//	x := 5
+//	defer func() {
+//		x++
+//	}()
+//	return x
+//}
+//
+//func f2() (x int) {
+//	defer func() {
+//		x++
+//	}()
+//	return 5
+//}
+//
+//func f3() (y int) {
+//	x := 5
+//	defer func() {
+//		x++
+//	}()
+//	return x
+//}
+//func f4() (x int) {
+//	defer func(x int) {
+//		x++
+//	}(x)
+//	return 5
+//}
+//func main() {
+//	fmt.Println(f1())
+//	fmt.Println(f2())
+//	fmt.Println(f3())
+//	fmt.Println(f4())
+//}
+//type A interface {
+//	ShowA() int
+//}
+//
+//type B interface {
+//	ShowB() int
+//}
+//
+//type Work struct {
+//	i int
+//}
+//
+//func (w Work) ShowA() int {
+//	return w.i + 10
+//}
+//
+//func (w Work) ShowB() int {
+//	return w.i + 20
+//}
+//
+//func main() {
+//	var a A = Work{3}
+//	s := a
+//	fmt.Println(s.ShowA())
+//	fmt.Println(s.ShowB())
+//}
+//type A interface {
+//	ShowA() int
+//}
+//
+//type B interface {
+//	ShowB() int
+//}
+//
+//type Work struct {
+//	i int
+//}
+//
+//func (w Work) ShowA() int {
+//	return w.i + 10
+//}
+//
+//func (w Work) ShowB() int {
+//	return w.i + 20
+//}
+//
+//func main() {
+//	c := Work{3}
+//	var a A = c
+//	var b B = c
+//	fmt.Println(a.ShowB())
+//	fmt.Println(b.ShowA())
+//}
+//func main() {
+//	i := 65
+//	fmt.Println(string(i))
+//}
+//func main() {
+//	i := -5
+//	j := +5
+//	fmt.Printf("%+d %+d", i, j)
+//}
+//func main() {
+//	s := make(map[string]int)
+//	delete(s, "h")
+//	fmt.Println(s["h"])
+//}
+//type Person struct {
+//	age int
+//}
+//
+//func main() {
+//	person := &Person{28}
+//
+//	// 1.
+//	defer fmt.Println(person.age)
+//
+//	// 2.
+//	defer func(p *Person) {
+//		fmt.Println(p.age)
+//	}(person)
+//
+//	// 3.
+//	defer func() {
+//		fmt.Println(person.age)
+//	}()
+//
+//	person = &Person{29}
+//}

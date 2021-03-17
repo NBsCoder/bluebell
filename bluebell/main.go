@@ -2728,3 +2728,288 @@ func main() {
 //	bar()
 //	fmt.Println(*p)
 //}
+//}
+//
+//func (w Work) ShowB() int {
+//	return w.i + 20
+//}
+//
+//func main() {
+//	var a A = Work{3}
+//	s := a
+//	fmt.Println(s.ShowA())
+//	fmt.Println(s.ShowB())
+//}
+//type A interface {
+//	ShowA() int
+//}
+//
+//type B interface {
+//	ShowB() int
+//}
+//
+//type Work struct {
+//	i int
+//}
+//
+//func (w Work) ShowA() int {
+//	return w.i + 10
+//}
+//
+//func (w Work) ShowB() int {
+//	return w.i + 20
+//}
+//
+//func main() {
+//	c := Work{3}
+//	var a A = c
+//	var b B = c
+//	fmt.Println(a.ShowB())
+//	fmt.Println(b.ShowA())
+//}
+//func main() {
+//	i := 65
+//	fmt.Println(string(i))
+//}
+//func main() {
+//	i := -5
+//	j := +5
+//	fmt.Printf("%+d %+d", i, j)
+//}
+//func main() {
+//	s := make(map[string]int)
+//	delete(s, "h")
+//	fmt.Println(s["h"])
+//}
+//type Person struct {
+//	age int
+//}
+//
+//func main() {
+//	person := &Person{28}
+//
+//	// 1.
+//	defer fmt.Println(person.age)
+//
+//	// 2.
+//	defer func(p *Person) {
+//		fmt.Println(p.age)
+//	}(person)
+//
+//	// 3.
+//	defer func() {
+//		fmt.Println(person.age)
+//	}()
+//
+//	person = &Person{29}
+//}
+//func incr(p *int) int {
+//	*p++
+//	return *p
+//}
+//
+//func main() {
+//	p :=1
+//	incr(&p)
+//	fmt.Println(p)
+//}
+//type Person struct {
+//	age int
+//}
+//
+//func main() {
+//	person := &Person{28}
+//
+//	// 1.
+//	defer fmt.Println(person.age)
+//
+//	// 2.
+//	defer func(p *Person) {
+//		fmt.Println(p.age)
+//	}(person)
+//
+//	// 3.
+//	defer func() {
+//		fmt.Println(person.age)
+//	}()
+//
+//	person.age = 29
+//}
+//func main() {
+//	var a = [5]int{1, 2, 3, 4, 5}
+//	var r [5]int
+//
+//	for i, v := range &a {
+//		if i == 0 {
+//			a[1] = 12
+//			a[2] = 13
+//		}
+//		r[i] = v
+//	}
+//	fmt.Println("r = ", r)
+//	fmt.Println("a = ", a)
+//}
+//func f(n int) (r int) {
+//	defer func() {
+//		r += n
+//		recover()
+//	}()
+//
+//	var f func()
+//
+//	defer f()
+//	f = func() {
+//		r += 2
+//	}
+//	return n + 1
+//}
+//
+//func main() {
+//	fmt.Println(f(3))
+//}
+//var p *int
+//func foo() (*int, error) {
+//	var i int = 5
+//	return &i, nil
+//}
+//
+//func bar() {
+//	//use p
+//	fmt.Println(*p)
+//}
+//
+//func main() {
+//	p, err := foo()
+//	if err != nil {
+//		fmt.Println(err)
+//		return
+//	}
+//	bar()
+//	fmt.Println(*p)
+//}
+//func main() {
+//
+//	s1 := []int{1, 2, 3}
+//	s2 := s1[1:]
+//	s2[1] = 4
+//	fmt.Println(s1)
+//	s2 = append(s2, 5, 6, 7)
+//	fmt.Println(s1)
+//	fmt.Println(s2)
+//}
+//func change(s ...int) {
+//   s = append(s,3)
+//}
+//
+//func main() {
+//   slice := make([]int,5,5)
+//   slice[0] = 1
+//   slice[1] = 2
+//   change(slice...)
+//   fmt.Println(slice)
+//   change(slice[0:2]...)
+//   fmt.Println(slice)
+//}
+//func main() {
+//	a := 1
+//	b := 2
+//	defer calc("1", a, calc("10", a, b))
+//	a = 0
+//	defer calc("2", a, calc("20", a, b))
+//	b = 1
+//}
+//
+//func calc(index string, a, b int) int {
+//	ret := a + b
+//	fmt.Println(index, a, b, ret)
+//	return ret
+//}
+//type People interface {
+//	Speak(string) string
+//}
+//
+//type Student struct{}
+//
+//func (stu *Student) Speak(think string) (talk string) {
+//	if think == "speak" {
+//		talk = "speak"
+//	} else {
+//		talk = "hi"
+//	}
+//	return
+//}
+//
+//func main() {
+//	var peo People = Student{}
+//	think := "speak"
+//	fmt.Println(peo.Speak(think))
+//}
+
+//func main() {
+//	runtime.GOMAXPROCS(1)
+//	go func() {
+//		for i := 0; i < 10; i++ {
+//			fmt.Println(i)
+//			time.Sleep(time.Second)
+//		}
+//	}()
+//	time.Sleep(time.Second*10)
+//}
+//var a bool = true
+//func main() {
+//	defer func(){
+//		fmt.Println("1")
+//	}()
+//	if a == true {
+//		fmt.Println("2")
+//		return
+//	}
+//	defer func(){
+//		fmt.Println("3")
+//	}()
+//}
+//type Foo struct {
+//	bar string
+//}
+//func main() {
+//	s1 := []Foo{
+//		{"A"},
+//		{"B"},
+//		{"C"},
+//	}
+//	s2 := make([]*Foo, len(s1))
+//	for i, value := range s1 {
+//		s2[i] = &value
+//	}
+//	fmt.Println(s1[0], s1[1], s1[2])
+//	fmt.Println(s2[0], s2[1], s2[2])
+//}
+//func main() {
+//	v := []int{1, 2, 3}
+//	for i := range v {
+//		v = append(v, i)
+//		fmt.Println(i)
+//	}
+//	fmt.Println(v)
+//}
+//func main() {
+//fmt.Println("hello world")
+//fmt.Println("hello world")
+//}
+//func main() {
+//
+//	var m = map[string]int{
+//		"A": 21,
+//		"B": 22,
+//		"C": 23,
+//	}
+//	counter := 0
+//	for k, v := range m {
+//		if counter == 0 {
+//			delete(m, "A")
+//		}
+//		counter++
+//		fmt.Println(k, v)
+//	}
+//	fmt.Println("counter is ", counter)
+//}

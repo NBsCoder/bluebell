@@ -3013,3 +3013,181 @@ func main() {
 //	}
 //	fmt.Println("counter is ", counter)
 //}
+//func main() {
+//
+//	s1 := []int{1, 2, 3}
+//	s2 := s1[1:]
+//	s2[1] = 4
+//	fmt.Println(s1)
+//	s2 = append(s2, 5, 6, 7)
+//	fmt.Println(s1)
+//	fmt.Println(s2)
+//}
+//func change(s ...int) {
+//   s = append(s,3)
+//}
+//
+//func main() {
+//   slice := make([]int,5,5)
+//   slice[0] = 1
+//   slice[1] = 2
+//   change(slice...)
+//   fmt.Println(slice)
+//   change(slice[0:2]...)
+//   fmt.Println(slice)
+//}
+//func main() {
+//	a := 1
+//	b := 2
+//	defer calc("1", a, calc("10", a, b))
+//	a = 0
+//	defer calc("2", a, calc("20", a, b))
+//	b = 1
+//}
+//
+//func calc(index string, a, b int) int {
+//	ret := a + b
+//	fmt.Println(index, a, b, ret)
+//	return ret
+//}
+//type People interface {
+//	Speak(string) string
+//}
+//
+//type Student struct{}
+//
+//func (stu *Student) Speak(think string) (talk string) {
+//	if think == "speak" {
+//		talk = "speak"
+//	} else {
+//		talk = "hi"
+//	}
+//	return
+//}
+//
+//func main() {
+//	var peo People = Student{}
+//	think := "speak"
+//	fmt.Println(peo.Speak(think))
+//}
+
+//func main() {
+//	runtime.GOMAXPROCS(1)
+//	go func() {
+//		for i := 0; i < 10; i++ {
+//			fmt.Println(i)
+//			time.Sleep(time.Second)
+//		}
+//	}()
+//	time.Sleep(time.Second*10)
+//}
+//var a bool = true
+//func main() {
+//	defer func(){
+//		fmt.Println("1")
+//	}()
+//	if a == true {
+//		fmt.Println("2")
+//		return
+//	}
+//	defer func(){
+//		fmt.Println("3")
+//	}()
+//}
+//type Foo struct {
+//	bar string
+//}
+//func main() {
+//	s1 := []Foo{
+//		{"A"},
+//		{"B"},
+//		{"C"},
+//	}
+//	s2 := make([]*Foo, len(s1))
+//	for i, value := range s1 {
+//		s2[i] = &value
+//	}
+//	fmt.Println(s1[0], s1[1], s1[2])
+//	fmt.Println(s2[0], s2[1], s2[2])
+//}
+//func main() {
+//	v := []int{1, 2, 3}
+//	for i := range v {
+//		v = append(v, i)
+//		fmt.Println(i)
+//	}
+//	fmt.Println(v)
+//}
+//func main() {
+//fmt.Println("hello world")
+//fmt.Println("hello world")
+//}
+//func main() {
+//
+//	var m = map[string]int{
+//		"A": 21,
+//		"B": 22,
+//		"C": 23,
+//	}
+//	counter := 0
+//	for k, v := range m {
+//		if counter == 0 {
+//			delete(m, "A")
+//		}
+//		counter++
+//		fmt.Println(k, v)
+//	}
+//	fmt.Println("counter is ", counter)
+//}
+//func main(){
+//	i:=1
+//	//j:=i++
+//	fmt.Println(i)
+//}
+//type User struct{}
+//type User1 User
+//type User2 = User
+//
+//func (i User1) m1() {
+//	fmt.Println("m1")
+//	fmt.Printf("%v,%T\n",i,i)
+//}
+//func (i User) m2() {
+//	fmt.Println("m2")
+//	fmt.Printf("%v,%T\n",i,i)
+//}
+//
+//func main() {
+//	var i1 User1
+//	var i2 User2
+//	i1.m1()
+//	i2.m2()
+//}
+//func main() {
+//	sn1 := struct {
+//		age  int
+//		name string
+//	}{age: 11, name: "qq"}
+//	sn2 := struct {
+//		age  int
+//		name string
+//	}{age: 11, name: "qq"}
+//
+//	if sn1 == sn2 {
+//		fmt.Println("sn1 == sn2")
+//	}
+//	fmt.Printf("sn1:%p,sn2:%p",sn1,sn2)
+//
+//	sm1 := struct {
+//		age int
+//		m   map[string]string
+//	}{age: 11, m: map[string]string{"a": "1"}}
+//	sm2 := struct {
+//		age int
+//		m   map[string]string
+//	}{age: 11, m: map[string]string{"a": "1"}}
+//
+//	if sm1 == sm2 {
+//		fmt.Println("sm1 == sm2")
+//	}
+//}

@@ -3191,3 +3191,266 @@ func main() {
 //		fmt.Println("sm1 == sm2")
 //	}
 //}
+{
+//		fmt.Println("nil")
+//	} else {
+//		fmt.Println(h)
+//	}
+//}
+//func main() {
+//	a := 5
+//	b := 8.1
+//	fmt.Println(a + b)
+//}
+//package main
+//
+//import "fmt"
+//
+//type MyInt1 int
+//type MyInt2 = int
+//
+//func main() {
+//	var i int =0
+//	var i1 MyInt1 = i
+//	var i2 = i
+//	fmt.Println(i1,i2)
+//}
+//var(
+//	size := 1024
+//	max_size = size*2
+//)
+//
+//func main() {
+//	fmt.Println(size,max_size)
+//}
+//func main() {
+//	x := 1
+//	fmt.Println(x)
+//	{
+//		fmt.Println(x)
+//		i,x := 2,2
+//		fmt.Println(i,x)
+//	}
+//	fmt.Println(x)  // print ?
+//}
+//type People struct{}
+//
+//func (p *People) ShowA() {
+//	fmt.Println("showA")
+//	p.ShowB()
+//}
+//func (p *People) ShowB() {
+//	fmt.Println("showB")
+//}
+//
+//type Teacher struct {
+//	People
+//}
+//
+//func (t *Teacher) ShowB() {
+//	fmt.Println("teacher showB")
+//}
+//
+//func main() {
+//	t := Teacher{}
+//	t.ShowA()
+//}
+//func incr(p *int) int {
+//	*p++
+//	return *p
+//}
+//
+//func main() {
+//	p :=1
+//	incr(&p)
+//	fmt.Println(p)
+//}
+//type A interface {
+//	ShowA() int
+//}
+//
+//type B interface {
+//	ShowB() int
+//}
+//
+//type Work struct {
+//	i int
+//}
+//
+//func (w Work) ShowA() int {
+//	return w.i + 10
+//}
+//
+//func (w Work) ShowB() int {
+//	return w.i + 20
+//}
+//
+//func main() {
+//	var a A = Work{3}
+//	s := a.(Work)
+//	fmt.Println(s.ShowA())
+//	fmt.Println(s.ShowB())
+//}
+//package main
+//import (
+//"fmt"
+//)
+//func main() {
+//	var x string = nil
+//	if x == nil {
+//		x = "default"
+//	}
+//	fmt.Println(x)
+//}
+//func increaseA() int {
+//	var i int
+//	defer func() {
+//		i++
+//	}()
+//	return i
+//}
+//
+//func increaseB() (r int) {
+//	defer func() {
+//		r++
+//	}()
+//	return r
+//}
+//
+//func main() {
+//	fmt.Println(increaseA())
+//	fmt.Println(increaseB())
+//}
+//type A interface {
+//	ShowA() int
+//}
+//
+//type B interface {
+//	ShowB() int
+//}
+//
+//type Work struct {
+//	i int
+//}
+//
+//func (w Work) ShowA() int {
+//	return w.i + 10
+//}
+//
+//func (w Work) ShowB() int {
+//	return w.i + 20
+//}
+//
+//func main() {
+//	c := Work{3}
+//	var a A = c
+//	var b B = c
+//	fmt.Println(a.ShowB())
+//	fmt.Println(b.ShowA())
+//}
+//type A interface {
+//	ShowA() int
+//}
+//
+//type B interface {
+//	ShowB() int
+//}
+//
+//type Work struct {
+//	i int
+//}
+//
+//func (w Work) ShowA() int {
+//	return w.i + 10
+//}
+//
+//func (w Work) ShowB() int {
+//	return w.i + 20
+//}
+//
+//func main() {
+//	var a A = Work{3}
+//	s := a.(Work)
+//	fmt.Println(s.ShowA())
+//	fmt.Println(s.ShowB())
+//}
+//type S struct {
+//}
+//
+//func f(x interface{}) {
+//}
+//
+//func g(x *interface{}) {
+//}
+//
+//func main() {
+//	s := S{}
+//	p := &s
+//	f(s) //1
+//	g(s) //2
+//	f(p) //3
+//	g(p) //4
+//}
+//type Math struct {
+//	x, y int
+//}
+//
+//var m = map[string]Math{
+//	"foo": Math{2, 3},
+//}
+//
+//func main() {
+//	m["foo"].x = 4
+//	fmt.Println(m["foo"].x)
+//}
+//func main() {
+//	var a = [5]int{1, 2, 3, 4, 5}
+//	var r [5]int
+//
+//	for i, v := range a {
+//		if i == 0 {
+//			a[1] = 12
+//			a[2] = 13
+//		}
+//		r[i] = v
+//	}
+//	fmt.Println("r = ", r)
+//	fmt.Println("a = ", a)
+//}
+
+
+
+//func f(n int) (r int) {
+//	defer func() {
+//		r += n
+//		recover()
+//	}()
+//
+//	var f func()
+//
+//	defer f()
+//	f = func() {
+//		r += 2
+//	}
+//	return n + 1
+//}
+//
+//func main() {
+//	fmt.Println(f(3))
+//}
+
+
+//func main(){
+//	s:=[]string{"a","b","c"}
+//	for v:=range s{
+//		fmt.Println(v)
+//	}
+//}
+
+//const i =100
+//const j =123
+//
+//func main()  {
+//	fmt.Println(&j,j)
+//	fmt.Println(&i,i)
+//}

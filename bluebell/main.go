@@ -101,3 +101,54 @@ func main() {
 //		"token": token,
 //	})
 //}
+//// SignIn 用户登陆 签发token
+//func SignIn(c *gin.Context) {
+//	var postData SignUpReq
+//	if err := c.ShouldBind(&postData); err != nil {
+//		response.ReturnJSON(c, http.StatusOK, statuscode.Faillure.Code, statuscode.Faillure.Msg, err)
+//		return
+//	}
+//	var payLoad = customerjwt.CustomClaims{TimeStr: time.Now().Format("2006-01-02 15:04:05"), Name: postData.Name, Password: postData.Pwd}
+//	token, err := customerjwt.NewJWT().CreateToken(payLoad)
+//	if err != nil {
+//		response.ReturnJSON(c, http.StatusOK, statuscode.Faillure.Code, statuscode.Faillure.Msg, err)
+//		return
+//	}
+//	response.ReturnJSON(c, http.StatusOK, statuscode.Faillure.Code, statuscode.Faillure.Msg, map[string]interface{}{
+//		"token": token,
+//	})
+//}
+//// SignIn 用户登陆 签发token
+//func SignIn(c *gin.Context) {
+//	var postData SignUpReq
+//	if err := c.ShouldBind(&postData); err != nil {
+//		response.ReturnJSON(c, http.StatusOK, statuscode.Faillure.Code, statuscode.Faillure.Msg, err)
+//		return
+//	}
+//	var payLoad = customerjwt.CustomClaims{TimeStr: time.Now().Format("2006-01-02 15:04:05"), Name: postData.Name, Password: postData.Pwd}
+//	token, err := customerjwt.NewJWT().CreateToken(payLoad)
+//	if err != nil {
+//		response.ReturnJSON(c, http.StatusOK, statuscode.Faillure.Code, statuscode.Faillure.Msg, err)
+//		return
+//	}
+//	response.ReturnJSON(c, http.StatusOK, statuscode.Faillure.Code, statuscode.Faillure.Msg, map[string]interface{}{
+//		"token": token,
+//	})
+//}
+//// SignIn 用户登陆 签发token
+//func SignIn(c *gin.Context) {ß
+//	var postData SignUpReq
+//	if err := c.ShouldBind(&postData); err != nil {
+//		response.ReturnJSON(c, http.StatusOK, statuscode.Faillure.Code, statuscode.Faillure.Msg, err)
+//		return
+//	}
+//	var payLoad = customerjwt.CustomClaims{TimeStr: time.Now().Format("2006-01-02 15:04:05"), Name: postData.Name, Password: postData.Pwd}
+//	token, err := customerjwt.NewJWT().CreateToken(payLoad)
+//	if err != nil {
+//		response.ReturnJSON(c, http.StatusOK, statuscode.Faillure.Code, statuscode.Faillure.Msg, err)
+//		return
+//	}
+//	response.ReturnJSON(c, http.StatusOK, statuscode.Faillure.Code, statuscode.Faillure.Msg, map[string]interface{}{
+//		"token": token,
+//	})
+//}
